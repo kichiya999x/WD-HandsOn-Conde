@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    background-color: #111;
+    z-index: 20;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px 48px;
+    height: 60px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    /* font-weight: 300; */
+    
+        &:hover{
+            color: rgb(239, 46, 46);
+        }
+  }
+  
+  .navbar__menu_container {
+    display: flex;
+    gap: 20px;
+  }
+
+.hero {
+    position: relative;
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+  section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(120vh - 60px);
+    object-fit: cover;
+}
+
+.glass {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  z-index: 1;
+  box-shadow: 10px 0 15px rgba(0,0,0,0.1);
+  transition: 0.5s;
+  transition-delay: 1s;
+}
+
+section.active .glass {
+  width: 100%;
+  backdrop-filter: blur(20px);
+  box-shadow: 10px 0 15px rgba(0,0,0,0.5);
+  transition-delay: 0s;
+}
+
+section .content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  transition: 0.5s;
+  transition-delay: 1s;
+}
+
+section.active .content {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-200px);
+  transition-delay: 0s;
+}
+
+section .content h2 {
+  position: relative;
+  color: #fff;
+  font-size: 10vw;
+  line-height: 0.30em;
+  letter-spacing: 3px;
+  text-shadow: 0 10px 5px rgba(22, 1, 1, 0.736);
+}
+
+section .content h2 span {
+  font-size: 0.2em;
+  font-weight: 300;
+  letter-spacing: 5px;
+  background: #fff;
+  color: #111;
+  padding: 0 10px;
+  text-shadow: 0 5px 5px rgba(0,0,0,0);
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+}
+
+section .sci {
+  position: absolute;
+  bottom: 40px;
+  right: 100px;
+  display: flex;
+  z-index: 100;
+}
+
+section .sci li {
+  list-style: none;
+  margin: 5px;
+  padding: 0 6px;
+  background: #fff;
+}
+
+section.active .sci li {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100px);
+}
+
+section .sci li a {
+  color: #111;
+  text-decoration: none;
+  display: inline-block;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,53 @@
+header {
+    width: 100%;
+    position: fixed;
+    background-color: #111;
+    z-index: 20;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px 48px;
+    height: 60px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    /* font-weight: 300; */
+    
+        &:hover{
+            color: rgb(214, 191, 16);
+        }
+  }
+  
+  .navbar__menu_container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .hero {
+    background-image: url(https://psfannet.files.wordpress.com/2020/12/psfannet_returnal.jpg);
+    height: 100dvh;
+    width: 100dvw;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 5rem;
+}
+
+.hero .content {
+    height: 100%;
+    color: white;
+    
+    h1, p, button {
+      margin-top: 50px; /* Adjust this value as needed */
+  }
+}
+
+.blank{
+  position: absolute;
+  height: 100dvh;
+  width: 100dvw;
+}
